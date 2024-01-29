@@ -1,0 +1,105 @@
+[gd_scene load_steps=14 format=3 uid="uid://blyp41tkcg0v1"]
+
+[ext_resource type="Script" path="res://ParallaxBackground.gd" id="1_2rrgq"]
+[ext_resource type="Texture2D" uid="uid://cre5hom6vw6e1" path="res://Assets/far.png" id="1_lnj5y"]
+[ext_resource type="Texture2D" uid="uid://bbbf4p3pilum4" path="res://Assets/sand.png" id="2_vmevk"]
+[ext_resource type="Texture2D" uid="uid://47n7j4klji1k" path="res://Assets/foregound-merged.png" id="3_1heb3"]
+[ext_resource type="Texture2D" uid="uid://j4eitidld064" path="res://Assets/submarine.png" id="3_k8134"]
+[ext_resource type="Script" path="res://Player.gd" id="5_wcth8"]
+[ext_resource type="Script" path="res://Enemy.gd" id="7_sl1mf"]
+[ext_resource type="Texture2D" uid="uid://bb1jos7k8wvbm" path="res://Assets/water world/spr_enemy_boss_06_walk_strip2.png" id="8_gdufq"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gsh3e"]
+radius = 31.0
+height = 98.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vb035"]
+atlas = ExtResource("8_gdufq")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g8ug2"]
+atlas = ExtResource("8_gdufq")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7pdui"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vb035")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g8ug2")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lng4x"]
+
+[node name="Main" type="Node2D"]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+script = ExtResource("1_2rrgq")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.5, 0.5)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+scale = Vector2(3.38542, 3.38542)
+texture = ExtResource("1_lnj5y")
+centered = false
+region_enabled = true
+region_rect = Rect2(-1.4707, -0.826996, 341.029, 193.38)
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+scale = Vector2(4.50391, 3.378)
+texture = ExtResource("2_vmevk")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 256.426, 192.838)
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(1.5, 1.5)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer3"]
+position = Vector2(1, 266)
+scale = Vector2(2.25195, 2.01042)
+texture = ExtResource("3_1heb3")
+centered = false
+
+[node name="Player" type="CharacterBody2D" parent="." groups=["Player"]]
+position = Vector2(411, 326)
+script = ExtResource("5_wcth8")
+
+[node name="Sprite2D" type="Sprite2D" parent="Player"]
+scale = Vector2(2.9375, 2.9375)
+texture = ExtResource("3_k8134")
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+position = Vector2(0, 10)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_gsh3e")
+debug_color = Color(0.952941, 0, 0.560784, 0.419608)
+
+[node name="Enemy" type="Area2D" parent="."]
+position = Vector2(1182, 294)
+scale = Vector2(1.60014, 1.60014)
+script = ExtResource("7_sl1mf")
+move_dir = Vector2(-1222, 0)
+move_speed = 200.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Enemy"]
+sprite_frames = SubResource("SpriteFrames_7pdui")
+autoplay = "default"
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy"]
+scale = Vector2(1.59345, 1.59345)
+shape = SubResource("CircleShape2D_lng4x")
