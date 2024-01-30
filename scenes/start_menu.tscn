@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dfmwib8kfh8y0" path="res://assets/menu/game_title.png" id="1_6eg54"]
 [ext_resource type="Texture2D" uid="uid://bknua3lyrnwlb" path="res://assets/menu/start_menu_background.png" id="2_xttsi"]
 
-[node name="Node" type="Node"]
+[node name="StartMenu" type="Node"]
 script = ExtResource("1_3rl8h")
 
 [node name="Background" type="TextureRect" parent="."]
@@ -17,7 +17,7 @@ grow_vertical = 2
 texture = ExtResource("2_xttsi")
 stretch_mode = 1
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="GameTitle" type="TextureRect" parent="."]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
