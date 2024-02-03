@@ -1,7 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://b67oyahqbul4j"]
+[gd_scene load_steps=8 format=3 uid="uid://b67oyahqbul4j"]
 
 [ext_resource type="Script" path="res://scripts/player_character.gd" id="1_g3541"]
 [ext_resource type="Texture2D" uid="uid://bbyjgiwkrt4ct" path="res://assets/player_character/player_sprite.png" id="2_y4b3h"]
+[ext_resource type="Texture2D" uid="uid://cntng0mam67je" path="res://assets/placeholders/player_placeholder_large.png" id="3_2ewvv"]
+[ext_resource type="Texture2D" uid="uid://c0ni2geipfemw" path="res://assets/placeholders/player_placeholder_small.png" id="4_km6wy"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vst0k"]
 atlas = ExtResource("2_y4b3h")
@@ -30,3 +32,11 @@ sprite_frames = SubResource("SpriteFrames_qjpf7")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-0.5, 0)
 shape = SubResource("RectangleShape2D_p2dmr")
+
+[node name="PlayerPlaceholderLarge" type="Sprite2D" parent="."]
+position = Vector2(180, 115)
+texture = ExtResource("3_2ewvv")
+
+[node name="PlayerPlaceholderSmall" type="Sprite2D" parent="."]
+position = Vector2(465, 138)
+texture = ExtResource("4_km6wy")
