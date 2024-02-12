@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b77d2rgd774i2"
-path="res://.godot/imported/Rectangle 2.png-d3310f9f0dcf4237b475b75510654799.ctex"
+uid="uid://bknua3lyrnwlb"
+path="res://.godot/imported/start_menu_background.png-9ad31cf56601797ff263ba1eb7e56208.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/placeholders/Rectangle 2.png"
-dest_files=["res://.godot/imported/Rectangle 2.png-d3310f9f0dcf4237b475b75510654799.ctex"]
+source_file="res://assets/interface/start_menu_background.png"
+dest_files=["res://.godot/imported/start_menu_background.png-9ad31cf56601797ff263ba1eb7e56208.ctex"]
 
 [params]
 

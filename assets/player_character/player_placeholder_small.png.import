@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bduposc53v6vb"
-path="res://.godot/imported/Rectangle 5.png-9228972b8815d9127179df7ae01d92a1.ctex"
+uid="uid://c0ni2geipfemw"
+path="res://.godot/imported/player_placeholder_small.png-96360a2176e4aa82ba9122288555c85d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/placeholders/Rectangle 5.png"
-dest_files=["res://.godot/imported/Rectangle 5.png-9228972b8815d9127179df7ae01d92a1.ctex"]
+source_file="res://assets/player_character/player_placeholder_small.png"
+dest_files=["res://.godot/imported/player_placeholder_small.png-96360a2176e4aa82ba9122288555c85d.ctex"]
 
 [params]
 

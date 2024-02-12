@@ -1,21 +1,60 @@
-[gd_scene load_steps=4 format=3 uid="uid://cj0o1k32ak117"]
+[gd_scene load_steps=10 format=3 uid="uid://cj0o1k32ak117"]
 
 [ext_resource type="Script" path="res://scripts/game_scene.gd" id="1_fl0mh"]
 [ext_resource type="PackedScene" uid="uid://b67oyahqbul4j" path="res://scenes/player_character.tscn" id="1_v6x7v"]
-[ext_resource type="Texture2D" uid="uid://bknua3lyrnwlb" path="res://assets/menu/start_menu_background.png" id="3_jsvlc"]
+[ext_resource type="Texture2D" uid="uid://dl1gylrcb1dv8" path="res://assets/background/far.png" id="3_3p8ce"]
+[ext_resource type="Shader" path="res://shaders/auto_scroller.gdshader" id="4_nu05g"]
+[ext_resource type="Texture2D" uid="uid://bxcx6lgly8tps" path="res://assets/background/sand.png" id="5_kykoh"]
+[ext_resource type="Texture2D" uid="uid://b7mdm4renltka" path="res://assets/background/foregound-merged.png" id="6_s4jnf"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_nqpiq"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_vpnro"]
+shader = ExtResource("4_nu05g")
+shader_parameter/direction = Vector2(3, 0)
+shader_parameter/speed_scale = 0.02
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_k2gvw"]
+shader = ExtResource("4_nu05g")
+shader_parameter/direction = Vector2(5, 0)
+shader_parameter/speed_scale = 0.02
 
 [node name="GameScene" type="Node"]
 script = ExtResource("1_fl0mh")
 
-[node name="GameBG" type="TextureRect" parent="."]
+[node name="GameBG2" type="TextureRect" parent="."]
 texture_filter = 1
+material = SubResource("ShaderMaterial_nqpiq")
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("3_jsvlc")
+texture = ExtResource("3_3p8ce")
+stretch_mode = 1
+
+[node name="GameBG3" type="TextureRect" parent="."]
+texture_filter = 1
+material = SubResource("ShaderMaterial_vpnro")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_kykoh")
+expand_mode = 3
+stretch_mode = 1
+
+[node name="GameBG" type="TextureRect" parent="."]
+texture_filter = 1
+material = SubResource("ShaderMaterial_k2gvw")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_s4jnf")
 stretch_mode = 1
 
 [node name="PlayerCharacter" parent="." instance=ExtResource("1_v6x7v")]
-position = Vector2(212, 341)
+position = Vector2(374, 543)

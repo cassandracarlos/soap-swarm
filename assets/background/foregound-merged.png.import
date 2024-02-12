@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bu4vvq0r5uv1m"
-path="res://.godot/imported/score_background.png-91b6f675dbc085157881ea9bad031353.ctex"
+uid="uid://b7mdm4renltka"
+path="res://.godot/imported/foregound-merged.png-1525c9b1051eb3b0c090f77abc67243e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/gui/score_background.png"
-dest_files=["res://.godot/imported/score_background.png-91b6f675dbc085157881ea9bad031353.ctex"]
+source_file="res://assets/background/foregound-merged.png"
+dest_files=["res://.godot/imported/foregound-merged.png-1525c9b1051eb3b0c090f77abc67243e.ctex"]
 
 [params]
 
