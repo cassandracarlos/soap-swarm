@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://ds55eexw851m2"]
 
 [ext_resource type="Script" path="res://scripts/start_menu.gd" id="1_3rl8h"]
-[ext_resource type="Texture2D" uid="uid://dfmwib8kfh8y0" path="res://assets/interface/game_title.png" id="1_6eg54"]
-[ext_resource type="Texture2D" uid="uid://bknua3lyrnwlb" path="res://assets/interface/start_menu_background.png" id="2_xttsi"]
+[ext_resource type="Texture2D" uid="uid://c4kqu825pqn51" path="res://assets/interface/Rectangle 1.png" id="2_ef5ls"]
+[ext_resource type="Texture2D" uid="uid://crvf3k0bbee5i" path="res://assets/interface/Soap Swarm!.png" id="3_t768g"]
 
 [node name="StartMenu" type="Node"]
 script = ExtResource("1_3rl8h")
@@ -14,7 +14,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_xttsi")
+texture = ExtResource("2_ef5ls")
 stretch_mode = 1
 
 [node name="GameTitle" type="TextureRect" parent="."]
@@ -23,13 +23,13 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -98.0
-offset_top = -104.0
-offset_right = 98.0
-offset_bottom = -49.0
+offset_left = -306.0
+offset_top = -289.0
+offset_right = 283.0
+offset_bottom = -15.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_6eg54")
+texture = ExtResource("3_t768g")
 
 [node name="PlayButton" type="Button" parent="."]
 anchors_preset = 8
@@ -37,27 +37,28 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -45.0
-offset_top = -14.0
-offset_right = 45.0
-offset_bottom = 17.0
+offset_left = -100.0
+offset_top = 123.0
+offset_bottom = 154.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "Play Game"
+scale = Vector2(2, 2)
+text = "Play"
 
 [node name="ExitButton" type="Button" parent="."]
-anchors_preset = 8
+anchors_preset = 7
 anchor_left = 0.5
-anchor_top = 0.5
+anchor_top = 1.0
 anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -18.5
-offset_top = 22.5
-offset_right = 18.5
-offset_bottom = 53.5
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -343.0
+offset_bottom = -312.0
 grow_horizontal = 2
-grow_vertical = 2
-text = "Exit"
+grow_vertical = 0
+scale = Vector2(2, 2)
+text = "Exit
+"
 
 [connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="ExitButton" to="." method="_on_exit_button_pressed"]
