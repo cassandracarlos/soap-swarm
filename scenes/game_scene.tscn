@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://cj0o1k32ak117"]
+[gd_scene load_steps=11 format=3 uid="uid://cj0o1k32ak117"]
 
 [ext_resource type="Script" path="res://scripts/game_scene.gd" id="1_fl0mh"]
 [ext_resource type="PackedScene" uid="uid://b67oyahqbul4j" path="res://scenes/player_character.tscn" id="1_v6x7v"]
@@ -6,6 +6,7 @@
 [ext_resource type="Shader" path="res://shaders/auto_scroller.gdshader" id="4_nu05g"]
 [ext_resource type="Texture2D" uid="uid://bxcx6lgly8tps" path="res://assets/background/sand.png" id="5_kykoh"]
 [ext_resource type="Texture2D" uid="uid://b7mdm4renltka" path="res://assets/background/foregound-merged.png" id="6_s4jnf"]
+[ext_resource type="PackedScene" uid="uid://dm8t6eg2a70u4" path="res://scenes/pause_menu.tscn" id="7_gtuk4"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_nqpiq"]
 
@@ -20,6 +21,7 @@ shader_parameter/direction = Vector2(5, 0)
 shader_parameter/speed_scale = 0.02
 
 [node name="GameScene" type="Node"]
+process_mode = 1
 script = ExtResource("1_fl0mh")
 
 [node name="GameBG2" type="TextureRect" parent="."]
@@ -58,3 +60,5 @@ stretch_mode = 1
 
 [node name="PlayerCharacter" parent="." instance=ExtResource("1_v6x7v")]
 position = Vector2(374, 543)
+
+[node name="PauseMenu" parent="." instance=ExtResource("7_gtuk4")]
