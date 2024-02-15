@@ -1,24 +1,9 @@
-extends Node
+extends Control
 
-func resume():
-	get_tree().paused = false
+@onready var game_state = $"../../"
 
-func pause():
-	get_tree().paused = true
-
-func testEsc():
+func _on_resume_pressed():
+	game_state.pauseMenu()
 	
-	if Input.is_action_just_pressed("esc") and !get_tree().paused == false:
-		pause()
-		
-	elif Input.is_action_just_pressed("esc") and get_tree().paused:
-		resume()
-
-func _on_continue_button_pressed():
-	resume()
-
-func _on_quit_button_pressed():
-	get_tree().change_scene_to_file("res://scenes/start_menu.tscn")
-	
-func _process(delta):
-	testEsc()
+func _on_quit_pressed():
+	get_tree().quit()
