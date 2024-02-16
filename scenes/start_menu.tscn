@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://ds55eexw851m2"]
 
 [ext_resource type="Script" path="res://scripts/start_menu.gd" id="1_3rl8h"]
-[ext_resource type="Texture2D" uid="uid://c4kqu825pqn51" path="res://assets/interface/Rectangle 1.png" id="2_ef5ls"]
-[ext_resource type="Texture2D" uid="uid://crvf3k0bbee5i" path="res://assets/interface/Soap Swarm!.png" id="3_t768g"]
+[ext_resource type="Texture2D" uid="uid://c4kqu825pqn51" path="res://assets/interface/title_screen_background.png" id="2_ef5ls"]
+[ext_resource type="Texture2D" uid="uid://crvf3k0bbee5i" path="res://assets/interface/game_title.png" id="3_t768g"]
 
 [node name="StartMenu" type="Node"]
 script = ExtResource("1_3rl8h")

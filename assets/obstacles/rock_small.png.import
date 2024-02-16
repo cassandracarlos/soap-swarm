@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c4kqu825pqn51"
-path="res://.godot/imported/Rectangle 1.png-2faec9c9a650471380ece8134d2bb8f5.ctex"
+uid="uid://eqf6wj3uswte"
+path="res://.godot/imported/rock_small.png-18c1edb1aab0224ceed3335a6817e08b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/interface/Rectangle 1.png"
-dest_files=["res://.godot/imported/Rectangle 1.png-2faec9c9a650471380ece8134d2bb8f5.ctex"]
+source_file="res://assets/obstacles/rock_small.png"
+dest_files=["res://.godot/imported/rock_small.png-18c1edb1aab0224ceed3335a6817e08b.ctex"]
 
 [params]
 

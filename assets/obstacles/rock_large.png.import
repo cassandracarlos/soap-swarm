@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://crvf3k0bbee5i"
-path="res://.godot/imported/Soap Swarm!.png-efea32dccb9c807c23496357a6287c47.ctex"
+uid="uid://tn27cu0vdts3"
+path="res://.godot/imported/rock_large.png-5ae874a83e8fb414d26c16b2626baf7b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/interface/Soap Swarm!.png"
-dest_files=["res://.godot/imported/Soap Swarm!.png-efea32dccb9c807c23496357a6287c47.ctex"]
+source_file="res://assets/obstacles/rock_large.png"
+dest_files=["res://.godot/imported/rock_large.png-5ae874a83e8fb414d26c16b2626baf7b.ctex"]
 
 [params]
 
