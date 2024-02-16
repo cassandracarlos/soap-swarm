@@ -2,8 +2,9 @@ extends Control
 
 @onready var game_state = $"../../"
 
-func _on_resume_pressed():
-	game_state.pauseMenu()
-	
-func _on_quit_pressed():
+func _on_continue_button_pressed():
+	hide()
+	Engine.time_scale = 1
+
+func _on_quit_button_pressed():
 	get_tree().quit()

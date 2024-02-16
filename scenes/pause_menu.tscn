@@ -30,3 +30,6 @@ offset_top = 4.0
 offset_right = 39.5
 offset_bottom = 35.0
 text = "Quit"
+
+[connection signal="pressed" from="ContinueButton" to="." method="_on_continue_button_pressed"]
+[connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]
