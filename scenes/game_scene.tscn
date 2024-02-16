@@ -62,3 +62,4 @@ position = Vector2(374, 543)
 
 [node name="PauseMenu" parent="." instance=ExtResource("7_gtuk4")]
 process_mode = 0
+visible = false
