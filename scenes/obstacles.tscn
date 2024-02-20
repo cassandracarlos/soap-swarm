@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://gvui77mlxh31"]
+
+[ext_resource type="Script" path="res://scripts/obstacles.gd" id="1_gf4oc"]
+[ext_resource type="Texture2D" uid="uid://tn27cu0vdts3" path="res://assets/obstacles/rock_large.png" id="1_qvnl5"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fblll"]
+radius = 214.0
+height = 456.0
+
+[node name="Obstacles" type="Area2D"]
+script = ExtResource("1_gf4oc")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_qvnl5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_fblll")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

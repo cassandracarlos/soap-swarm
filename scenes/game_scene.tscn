@@ -8,7 +8,6 @@
 [ext_resource type="Texture2D" uid="uid://b7mdm4renltka" path="res://assets/background/foregound-merged.png" id="6_s4jnf"]
 [ext_resource type="PackedScene" uid="uid://dm8t6eg2a70u4" path="res://scenes/pause_menu.tscn" id="7_gtuk4"]
 [ext_resource type="PackedScene" uid="uid://8ail3va4njqe" path="res://scenes/power_up.tscn" id="8_48plj"]
-[ext_resource type="Script" path="res://scripts/game_manager.gd" id="9_5vmdw"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_nqpiq"]
 
@@ -21,6 +20,16 @@ shader_parameter/speed_scale = 0.02
 shader = ExtResource("4_nu05g")
 shader_parameter/direction = Vector2(5, 0)
 shader_parameter/speed_scale = 0.02
+
+[sub_resource type="GDScript" id="GDScript_qlubo"]
+script/source = "extends Node
+
+var points = 0
+
+func add_point():
+	points += 1
+	print(points)
+"
 
 [node name="GameScene" type="Node"]
 script = ExtResource("1_fl0mh")
@@ -69,6 +78,11 @@ visible = false
 [node name="Area2D" parent="." instance=ExtResource("8_48plj")]
 position = Vector2(1294, 260)
 
-[node name="GameManager" type="Node" parent="."]
+[node name="DistanceTracker" type="Node" parent="."]
 unique_name_in_owner = true
-script = ExtResource("9_5vmdw")
+script = SubResource("GDScript_qlubo")
+
+[node name="SpawnTimer" type="Timer" parent="."]
+wait_time = 1.5
+
+[connection signal="timeout" from="SpawnTimer" to="." method="_on_spawn_timer_timeout"]

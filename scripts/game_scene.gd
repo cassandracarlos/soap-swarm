@@ -1,5 +1,7 @@
 extends Node
 
+@export var rock_sprite : PackedScene
+
 @onready var pause_menu = $PauseMenu
 var paused = false
 
@@ -16,3 +18,10 @@ func pauseMenu():
 		Engine.time_scale = 0
 		
 	paused = !paused
+
+func _on_spawn_timer_timeout():
+	generate_obstacles()
+	
+func generate_obstacles():
+	var obstacle = rock_sprite.instantiate()
+
