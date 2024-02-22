@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dq2ejqpj0sjuh"]
+
+[ext_resource type="Script" path="res://scripts/objects/small_rock.gd" id="1_dvlbb"]
+
+[node name="SmallRock" type="Area2D"]
+script = ExtResource("1_dvlbb")

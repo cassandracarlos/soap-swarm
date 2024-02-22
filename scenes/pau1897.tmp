@@ -1,0 +1,39 @@
+[gd_scene load_steps=2 format=3 uid="uid://dm8t6eg2a70u4"]
+
+[ext_resource type="Script" path="res://scripts/pause_menu.gd" id="1_nw3s7"]
+
+[node name="PauseMenu" type="Node"]
+process_mode = 2
+script = ExtResource("1_nw3s7")
+
+[node name="ResumeButton" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -60.0
+offset_top = -38.5
+offset_right = 60.0
+offset_bottom = -7.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Resume Game"
+
+[node name="QuitButton" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -55.5
+offset_top = 0.5
+offset_right = 55.5
+offset_bottom = 31.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Quit to Menu
+"
+
+[connection signal="pressed" from="ResumeButton" to="." method="_on_continue_button_pressed"]
+[connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]

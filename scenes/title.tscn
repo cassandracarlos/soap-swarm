@@ -1,23 +1,28 @@
 [gd_scene load_steps=4 format=3 uid="uid://ds55eexw851m2"]
 
-[ext_resource type="Script" path="res://scripts/screens/start_menu.gd" id="1_3rl8h"]
-[ext_resource type="Texture2D" uid="uid://c4kqu825pqn51" path="res://assets/ui/title_screen_background.png" id="2_ef5ls"]
-[ext_resource type="Texture2D" uid="uid://crvf3k0bbee5i" path="res://assets/ui/game_title.png" id="3_t768g"]
+[ext_resource type="Script" path="res://scripts/title.gd" id="1_3tkrm"]
+[ext_resource type="Texture2D" uid="uid://c4kqu825pqn51" path="res://assets/interface/title_background.png" id="2_xhbll"]
+[ext_resource type="Texture2D" uid="uid://crvf3k0bbee5i" path="res://assets/interface/game_title.png" id="3_b7h0v"]
 
-[node name="StartMenu" type="Node"]
-script = ExtResource("1_3rl8h")
+[node name="StartMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_3tkrm")
 
 [node name="Background" type="TextureRect" parent="."]
 texture_filter = 1
+layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_ef5ls")
+texture = ExtResource("2_xhbll")
 stretch_mode = 1
 
 [node name="GameTitle" type="TextureRect" parent="."]
+visible = false
+layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -29,9 +34,10 @@ offset_right = 283.0
 offset_bottom = -15.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("3_t768g")
+texture = ExtResource("3_b7h0v")
 
 [node name="PlayButton" type="Button" parent="."]
+layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -46,6 +52,7 @@ scale = Vector2(2, 2)
 text = "Play"
 
 [node name="ExitButton" type="Button" parent="."]
+layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0

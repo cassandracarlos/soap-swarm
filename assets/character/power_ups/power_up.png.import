@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bxcx6lgly8tps"
-path="res://.godot/imported/sand.png-3c8e7f075ed0d9990aeba99455466459.ctex"
+uid="uid://dkk6cqui6cmgy"
+path="res://.godot/imported/power_up.png-4b04bcbe256881484b7e62744dfed551.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/bg/sand.png"
-dest_files=["res://.godot/imported/sand.png-3c8e7f075ed0d9990aeba99455466459.ctex"]
+source_file="res://assets/character/power_ups/power_up.png"
+dest_files=["res://.godot/imported/power_up.png-4b04bcbe256881484b7e62744dfed551.ctex"]
 
 [params]
 

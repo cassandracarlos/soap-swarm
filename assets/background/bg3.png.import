@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b7mdm4renltka"
-path="res://.godot/imported/foregound-merged.png-d6d4327e40a5f2e4489c2d00ab53fa5c.ctex"
+uid="uid://dl1gylrcb1dv8"
+path="res://.godot/imported/bg3.png-d690aa1a0c8b94d1dca2ddc3483b3996.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/bg/foregound-merged.png"
-dest_files=["res://.godot/imported/foregound-merged.png-d6d4327e40a5f2e4489c2d00ab53fa5c.ctex"]
+source_file="res://assets/background/bg3.png"
+dest_files=["res://.godot/imported/bg3.png-d690aa1a0c8b94d1dca2ddc3483b3996.ctex"]
 
 [params]
 

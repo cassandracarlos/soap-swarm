@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://tn27cu0vdts3"
-path="res://.godot/imported/rock_large.png-d89c9eb74bdd80ae674c8af493bea444.ctex"
+path="res://.godot/imported/large_rock.png-6c2e6560229c6c840e8c4f5e5ade3152.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/rocks/rock_large.png"
-dest_files=["res://.godot/imported/rock_large.png-d89c9eb74bdd80ae674c8af493bea444.ctex"]
+source_file="res://assets/obstacles/large_rock.png"
+dest_files=["res://.godot/imported/large_rock.png-6c2e6560229c6c840e8c4f5e5ade3152.ctex"]
 
 [params]
 

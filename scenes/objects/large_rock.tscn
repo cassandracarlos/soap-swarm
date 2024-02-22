@@ -1,14 +1,14 @@
 [gd_scene load_steps=4 format=3 uid="uid://gvui77mlxh31"]
 
-[ext_resource type="Script" path="res://scripts/objects/rock_small.gd" id="1_gf4oc"]
-[ext_resource type="Texture2D" uid="uid://tn27cu0vdts3" path="res://assets/rocks/rock_large.png" id="1_qvnl5"]
+[ext_resource type="Script" path="res://scripts/objects/large_rock.gd" id="1_2h3ee"]
+[ext_resource type="Texture2D" uid="uid://tn27cu0vdts3" path="res://assets/obstacles/large_rock.png" id="1_qvnl5"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fblll"]
 radius = 214.0
 height = 456.0
 
 [node name="Obstacles" type="Area2D"]
-script = ExtResource("1_gf4oc")
+script = ExtResource("1_2h3ee")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_qvnl5")
