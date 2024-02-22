@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://cymbyu5tiqul3"]
 
-[ext_resource type="Script" path="res://scripts/game_over.gd" id="1_atsml"]
-[ext_resource type="Texture2D" uid="uid://8dd8mlojwajx" path="res://assets/collectables/collectable_item.png" id="2_3ig8k"]
-[ext_resource type="Texture2D" uid="uid://dfmwib8kfh8y0" path="res://assets/interface/game_title.png" id="3_y434e"]
+[ext_resource type="Script" path="res://scripts/screens/game_over.gd" id="1_atsml"]
+[ext_resource type="Texture2D" path="res://assets/collectables/collectable_item.png" id="2_3ig8k"]
+[ext_resource type="Texture2D" uid="uid://crvf3k0bbee5i" path="res://assets/ui/game_title.png" id="3_y434e"]
 
 [node name="Node" type="Node"]
 script = ExtResource("1_atsml")

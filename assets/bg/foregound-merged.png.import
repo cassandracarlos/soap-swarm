@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://eqf6wj3uswte"
-path="res://.godot/imported/rock_small.png-18c1edb1aab0224ceed3335a6817e08b.ctex"
+uid="uid://b7mdm4renltka"
+path="res://.godot/imported/foregound-merged.png-d6d4327e40a5f2e4489c2d00ab53fa5c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/obstacles/rock_small.png"
-dest_files=["res://.godot/imported/rock_small.png-18c1edb1aab0224ceed3335a6817e08b.ctex"]
+source_file="res://assets/bg/foregound-merged.png"
+dest_files=["res://.godot/imported/foregound-merged.png-d6d4327e40a5f2e4489c2d00ab53fa5c.ctex"]
 
 [params]
 

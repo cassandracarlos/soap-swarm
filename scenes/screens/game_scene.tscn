@@ -1,23 +1,23 @@
 [gd_scene load_steps=13 format=3 uid="uid://cj0o1k32ak117"]
 
-[ext_resource type="Script" path="res://scripts/game_scene.gd" id="1_fl0mh"]
-[ext_resource type="PackedScene" uid="uid://b67oyahqbul4j" path="res://scenes/player_character.tscn" id="1_v6x7v"]
-[ext_resource type="Texture2D" uid="uid://dl1gylrcb1dv8" path="res://assets/background/far.png" id="3_3p8ce"]
-[ext_resource type="Shader" path="res://shaders/auto_scroller.gdshader" id="4_nu05g"]
-[ext_resource type="Texture2D" uid="uid://bxcx6lgly8tps" path="res://assets/background/sand.png" id="5_kykoh"]
-[ext_resource type="Texture2D" uid="uid://b7mdm4renltka" path="res://assets/background/foregound-merged.png" id="6_s4jnf"]
-[ext_resource type="PackedScene" uid="uid://dm8t6eg2a70u4" path="res://scenes/pause_menu.tscn" id="7_gtuk4"]
-[ext_resource type="PackedScene" uid="uid://8ail3va4njqe" path="res://scenes/power_up.tscn" id="8_48plj"]
+[ext_resource type="Script" path="res://scripts/screens/game_scene.gd" id="1_n73hi"]
+[ext_resource type="Texture2D" uid="uid://dl1gylrcb1dv8" path="res://assets/bg/far.png" id="2_yhyhu"]
+[ext_resource type="Shader" path="res://assets/shaders/auto_scroller.gdshader" id="3_yja22"]
+[ext_resource type="Texture2D" uid="uid://bxcx6lgly8tps" path="res://assets/bg/sand.png" id="4_3d2k2"]
+[ext_resource type="Texture2D" uid="uid://b7mdm4renltka" path="res://assets/bg/foregound-merged.png" id="5_0pywl"]
+[ext_resource type="PackedScene" uid="uid://b67oyahqbul4j" path="res://scenes/objects/player_character.tscn" id="6_lxyiy"]
+[ext_resource type="PackedScene" uid="uid://dm8t6eg2a70u4" path="res://scenes/screens/pause_menu.tscn" id="7_wtfkn"]
+[ext_resource type="PackedScene" uid="uid://8ail3va4njqe" path="res://scenes/objects/power_up.tscn" id="8_nhurn"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_nqpiq"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_vpnro"]
-shader = ExtResource("4_nu05g")
+shader = ExtResource("3_yja22")
 shader_parameter/direction = Vector2(3, 0)
 shader_parameter/speed_scale = 0.02
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_k2gvw"]
-shader = ExtResource("4_nu05g")
+shader = ExtResource("3_yja22")
 shader_parameter/direction = Vector2(5, 0)
 shader_parameter/speed_scale = 0.02
 
@@ -32,7 +32,7 @@ func add_point():
 "
 
 [node name="GameScene" type="Node"]
-script = ExtResource("1_fl0mh")
+script = ExtResource("1_n73hi")
 
 [node name="GameBG2" type="TextureRect" parent="."]
 texture_filter = 1
@@ -42,7 +42,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("3_3p8ce")
+texture = ExtResource("2_yhyhu")
 stretch_mode = 1
 
 [node name="GameBG3" type="TextureRect" parent="."]
@@ -53,7 +53,19 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("5_kykoh")
+texture = ExtResource("4_3d2k2")
+expand_mode = 3
+stretch_mode = 1
+
+[node name="GameBG4" type="TextureRect" parent="."]
+texture_filter = 1
+material = SubResource("ShaderMaterial_vpnro")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_3d2k2")
 expand_mode = 3
 stretch_mode = 1
 
@@ -65,17 +77,17 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("6_s4jnf")
+texture = ExtResource("5_0pywl")
 stretch_mode = 1
 
-[node name="PlayerCharacter" parent="." instance=ExtResource("1_v6x7v")]
+[node name="PlayerCharacter" parent="." instance=ExtResource("6_lxyiy")]
 position = Vector2(374, 543)
 
-[node name="PauseMenu" parent="." instance=ExtResource("7_gtuk4")]
+[node name="PauseMenu" parent="." instance=ExtResource("7_wtfkn")]
 process_mode = 0
 visible = false
 
-[node name="Area2D" parent="." instance=ExtResource("8_48plj")]
+[node name="Area2D" parent="." instance=ExtResource("8_nhurn")]
 position = Vector2(1294, 260)
 
 [node name="DistanceTracker" type="Node" parent="."]
