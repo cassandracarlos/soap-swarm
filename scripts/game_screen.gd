@@ -25,3 +25,10 @@ func _on_spawn_timer_timeout():
 func generate_obstacles():
 	var obstacle = rock_sprite.instantiate()
 
+func lose_condition():
+	if $Player.position.x < 0:
+		stop_game()
+		
+func stop_game():
+	get_tree().change_scene_to_file("res://scenes/lose_screen.tscn")
+	

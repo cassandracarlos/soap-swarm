@@ -1,0 +1,65 @@
+[gd_scene load_steps=11 format=3 uid="uid://cj0o1k32ak117"]
+
+[ext_resource type="Script" path="res://scripts/game_screen.gd" id="1_fhfyg"]
+[ext_resource type="Texture2D" uid="uid://dl1gylrcb1dv8" path="res://assets/background/bg1.png" id="2_4usim"]
+[ext_resource type="Shader" path="res://assets/background/shaders/auto_scroller.gdshader" id="3_lyn6s"]
+[ext_resource type="Texture2D" uid="uid://bxcx6lgly8tps" path="res://assets/background/bg2.png" id="4_8lemu"]
+[ext_resource type="Texture2D" uid="uid://b7mdm4renltka" path="res://assets/background/bg3.png" id="5_ajjxa"]
+[ext_resource type="PackedScene" uid="uid://b67oyahqbul4j" path="res://scenes/objects/character.tscn" id="6_1du8m"]
+[ext_resource type="PackedScene" uid="uid://dm8t6eg2a70u4" path="res://scenes/pause_screen.tscn" id="7_gbvso"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_nqpiq"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_vpnro"]
+shader = ExtResource("3_lyn6s")
+shader_parameter/direction = Vector2(3, 0)
+shader_parameter/speed_scale = 0.02
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_k2gvw"]
+shader = ExtResource("3_lyn6s")
+shader_parameter/direction = Vector2(5, 0)
+shader_parameter/speed_scale = 0.02
+
+[node name="GameScene" type="Node"]
+script = ExtResource("1_fhfyg")
+
+[node name="BG1" type="TextureRect" parent="."]
+texture_filter = 1
+material = SubResource("ShaderMaterial_nqpiq")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_4usim")
+stretch_mode = 1
+
+[node name="BG2" type="TextureRect" parent="."]
+texture_filter = 1
+material = SubResource("ShaderMaterial_vpnro")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_8lemu")
+expand_mode = 3
+stretch_mode = 1
+
+[node name="BG3" type="TextureRect" parent="."]
+texture_filter = 1
+material = SubResource("ShaderMaterial_k2gvw")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_ajjxa")
+stretch_mode = 1
+
+[node name="Player" parent="." instance=ExtResource("6_1du8m")]
+position = Vector2(374, 543)
+
+[node name="PauseMenu" parent="." instance=ExtResource("7_gbvso")]
+process_mode = 0
+visible = false

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://crvf3k0bbee5i"
-path="res://.godot/imported/game_title.png-616fd059ee699e8ca75299877022274f.ctex"
+uid="uid://dkk6cqui6cmgy"
+path="res://.godot/imported/power_up.png-c9770125645f72533a75c2992784776b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/interface/game_title.png"
-dest_files=["res://.godot/imported/game_title.png-616fd059ee699e8ca75299877022274f.ctex"]
+source_file="res://assets/power_ups/power_up.png"
+dest_files=["res://.godot/imported/power_up.png-c9770125645f72533a75c2992784776b.ctex"]
 
 [params]
 
