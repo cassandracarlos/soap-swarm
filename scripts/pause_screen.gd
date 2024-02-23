@@ -1,8 +1,6 @@
 extends Control
 
-@onready var game_state = $"../../"
-
-func _on_continue_button_pressed():
+func _on_resume_button_pressed():
 	hide()
 	Engine.time_scale = 1
 

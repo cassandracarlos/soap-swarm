@@ -43,3 +43,6 @@ grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(2, 2)
 text = "Quit to Title"
+
+[connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]

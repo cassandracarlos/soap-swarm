@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://cj0o1k32ak117"]
+[gd_scene load_steps=12 format=3 uid="uid://cj0o1k32ak117"]
 
 [ext_resource type="Script" path="res://scripts/game_screen.gd" id="1_fhfyg"]
 [ext_resource type="Texture2D" uid="uid://dl1gylrcb1dv8" path="res://assets/background/bg1.png" id="2_4usim"]
@@ -19,6 +19,9 @@ shader_parameter/speed_scale = 0.02
 shader = ExtResource("3_lyn6s")
 shader_parameter/direction = Vector2(5, 0)
 shader_parameter/speed_scale = 0.02
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kdi8b"]
+size = Vector2(20, 1090)
 
 [node name="GameScene" type="Node"]
 script = ExtResource("1_fhfyg")
@@ -63,3 +66,9 @@ position = Vector2(374, 543)
 [node name="PauseMenu" parent="." instance=ExtResource("7_gbvso")]
 process_mode = 0
 visible = false
+
+[node name="DeathWall" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DeathWall"]
+position = Vector2(0, 535)
+shape = SubResource("RectangleShape2D_kdi8b")

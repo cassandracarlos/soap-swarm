@@ -43,5 +43,5 @@ scale = Vector2(2, 2)
 text = "Quit to Title
 "
 
-[connection signal="pressed" from="ResumeButton" to="." method="_on_continue_button_pressed"]
+[connection signal="pressed" from="ResumeButton" to="." method="_on_resume_button_pressed"]
 [connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]
