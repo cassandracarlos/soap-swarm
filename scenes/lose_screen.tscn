@@ -3,6 +3,7 @@
 [ext_resource type="Script" path="res://scripts/lose_screen.gd" id="1_bj4k0"]
 
 [node name="GameOver" type="Control"]
+visible = false
 layout_mode = 3
 anchor_right = 0.5
 anchor_bottom = 0.6

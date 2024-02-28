@@ -1,6 +1,8 @@
-extends Area2D
+extends RigidBody2D
 
-signal hit
-
-func _on_body_entered(body):
-	hit.emit()
+func _ready():
+	var mob_types = $AnimatedSprite2D.sprite_frames.get_animation_names()
+	$AnimatedSprite2D.play("default")
+	
+func _on_visible_on_screen_notifier_2d_screen_exited():
+	queue_free()

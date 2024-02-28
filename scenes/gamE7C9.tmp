@@ -1,13 +1,13 @@
-[gd_scene load_steps=13 format=3 uid="uid://cj0o1k32ak117"]
+[gd_scene load_steps=14 format=3 uid="uid://cj0o1k32ak117"]
 
 [ext_resource type="Script" path="res://scripts/game_screen.gd" id="1_fhfyg"]
 [ext_resource type="Texture2D" uid="uid://dl1gylrcb1dv8" path="res://assets/background/bg1.png" id="2_4usim"]
+[ext_resource type="PackedScene" uid="uid://gvui77mlxh31" path="res://scenes/objects/large_rock.tscn" id="2_5gqae"]
 [ext_resource type="Shader" path="res://assets/background/shaders/auto_scroller.gdshader" id="3_lyn6s"]
 [ext_resource type="Texture2D" uid="uid://bxcx6lgly8tps" path="res://assets/background/bg2.png" id="4_8lemu"]
 [ext_resource type="Texture2D" uid="uid://b7mdm4renltka" path="res://assets/background/bg3.png" id="5_ajjxa"]
 [ext_resource type="PackedScene" uid="uid://b67oyahqbul4j" path="res://scenes/objects/player_character.tscn" id="6_1du8m"]
 [ext_resource type="PackedScene" uid="uid://dm8t6eg2a70u4" path="res://scenes/pause_screen.tscn" id="7_gbvso"]
-[ext_resource type="PackedScene" uid="uid://cymbyu5tiqul3" path="res://scenes/lose_screen.tscn" id="9_aqr2c"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_nqpiq"]
 
@@ -21,11 +21,18 @@ shader = ExtResource("3_lyn6s")
 shader_parameter/direction = Vector2(5, 0)
 shader_parameter/speed_scale = 0.02
 
+[sub_resource type="Curve2D" id="Curve2D_8k32u"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 1920, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1072, 0, 0, 0, 0, 1920, 1080, 0, 0, 0, 0, 1920, 0, 0, 0, 0, 0, 1920, 0)
+}
+point_count = 6
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kdi8b"]
 size = Vector2(47, 1077)
 
 [node name="GameScene" type="Node"]
 script = ExtResource("1_fhfyg")
+mob_scene = ExtResource("2_5gqae")
 
 [node name="BG1" type="TextureRect" parent="."]
 texture_filter = 1
@@ -65,8 +72,14 @@ stretch_mode = 1
 position = Vector2(240, 450)
 
 [node name="PlayerCharacter" parent="." instance=ExtResource("6_1du8m")]
-position = Vector2(255, 429)
 scale = Vector2(1.5625, 1.5625)
+
+[node name="MobPath" type="Path2D" parent="."]
+curve = SubResource("Curve2D_8k32u")
+
+[node name="MobSpawnLocation" type="PathFollow2D" parent="MobPath"]
+position = Vector2(1920, 0)
+rotation = 3.14159
 
 [node name="PauseMenu" parent="." instance=ExtResource("7_gbvso")]
 process_mode = 0
@@ -78,13 +91,11 @@ visible = false
 position = Vector2(-0.5, 541.5)
 shape = SubResource("RectangleShape2D_kdi8b")
 
+[node name="ScoreTimer" type="Timer" parent="."]
+
+[node name="MobTimer" type="Timer" parent="."]
+wait_time = 0.5
+
 [node name="StartTimer" type="Timer" parent="."]
 wait_time = 2.0
 one_shot = true
-
-[node name="ScoreTimer" type="Timer" parent="."]
-
-[node name="ObstacleTimer" type="Timer" parent="."]
-wait_time = 0.5
-
-[node name="GameOver" parent="." instance=ExtResource("9_aqr2c")]
